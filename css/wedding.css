@@ -1,0 +1,139 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1E5330), to(#10321B));
+  background: linear-gradient(180deg, #1E5330 0%, #10321B 100%);
+}
+
+.img-w100 {
+  width: 100%;
+}
+
+.font-cor {
+  font-family: 'Cormorant', serif !important;
+}
+
+.date {
+  text-align: center;
+}
+
+.date__top {
+  padding: 13.06667vw 36.8vw 0;
+}
+
+.date__year {
+  padding-top: 1.6vw;
+  padding-bottom: 2.13333vw;
+  font-size: 3.73333vw;
+  border-top: 2px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+.date__wrap {
+  padding: 0 28.8vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.date__box {
+  position: relative;
+  height: 28.53333vw;
+  margin-top: 10.66667vw;
+}
+
+.date__box:before {
+  position: absolute;
+  display: block;
+  top: 7vw;
+  left: -2vw;
+  right: 1vw;
+  bottom: 0;
+  margin: auto;
+  width: 44.8vw;
+  height: 0;
+  border-top: 1px solid #fff;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  opacity: 0.3;
+  content: '';
+}
+
+.date__month {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 32vw;
+  color: #fff;
+  line-height: 0.18333;
+  letter-spacing: -0.04em;
+  font-family: "Cormorant", serif !important;
+}
+
+.date__day {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 32vw;
+  color: #fff;
+  line-height: 0.18333;
+  letter-spacing: -0.04em;
+  font-family: "Cormorant", serif !important;
+}
+
+.date__time {
+  margin-top: 19.46667vw;
+  color: #fff;
+  letter-spacing: 0.3em;
+}
+
+.date__img {
+  margin-top: 4vw;
+  width: 100%;
+}
+
+.date__txt {
+  font-size: 4.26667vw;
+  line-height: 1.375;
+  letter-spacing: -0.04em;
+  color: #000;
+  opacity: 0.3;
+}
+
+.front {
+  position: relative;
+}
+
+.front__wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.front__tit {
+  display: inline-block;
+  margin: 0;
+  font-size: 24vw;
+  letter-spacing: -0.04em;
+  color: #0B3E1C;
+  font-weight: 600;
+  font-family: "Cormorant", serif !important;
+  line-height: 1.02222;
+  text-align: left;
+}
+/*# sourceMappingURL=wedding.css.map */
