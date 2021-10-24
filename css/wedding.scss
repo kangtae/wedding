@@ -5,6 +5,7 @@ body{
 p{margin:0;} 
 $deviceWidth:375;
 $eng:'Cormorant', serif !important;
+$green:#0B3E1C;
 @function calcVw($size) {
     @return ($size/$deviceWidth)*100;
 }
@@ -31,5 +32,32 @@ header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
 
 .front{position:relative;
     &__wrap{position: absolute; bottom:0; left:0; right:0; text-align: center;} 
-    &__tit{display:inline-block; margin:0; font-size:calcVw(90vw); letter-spacing: -0.04em; color:#0B3E1C; font-weight:600; font-family: $eng; line-height: calclH(92,90 ); text-align: left;}
+    &__tit{display:inline-block; margin:0; font-size:calcVw(90vw); letter-spacing: -0.04em; color:$green; font-weight:600; font-family: $eng; line-height: calclH(92,90 ); text-align: left;}
+}
+
+
+.info{margin-top:calcVw(12vw); padding:0 calcVw(45vw);
+    &__tit{position:relative; margin:calcVw(41vw) 0 0 0; height:calcVw(37vw); font-size:calcVw(20vw); line-height:calclH(24,20 ); color:$green; letter-spacing: -0.04em; border-bottom:1px solid #1E5330;}
+    &__box{margin-top:calcVw(20vw); padding:calcVw(8vw); box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05); border-radius: 16px; box-sizing: border-box;}
+}
+.tab{text-align: center;
+    $this:&;
+    &__list{margin:0; padding:calcVw(2vw) 0; list-style:none; font-size:0; border-radius: 8px; background-color: #F7FAFC;}
+    &__item{position:relative; display: inline-block; width:33.33%;
+        &.is-active{
+            #{$this}__link{background-color:#1E5330; border-radius: 8px; color:#fff;}
+            &:before{display:none !important;}
+        }
+        & + &:before{position: absolute; top:calcVw(12vw); bottom:calcVw(12vw); left:0; width:0; margin:auto 0; border-left:1px solid #E2E8F0; content:'';}
+    }
+    &__link{display:block; padding:calcVw(16vw) 0 calcVw(13vw); font-size:calcVw(12vw); line-height:calclH(15,12); text-decoration: none; color:inherit;}
+}
+
+.map{
+    &__tit{margin:calcVw(23vw) 0 0; font-size:calcVw(16vw); line-height:calclH(25,16);}
+    &__txt{margin-top:calcVw(12vw); font-size:calcVw(14vw); line-height:calclH(23,14); word-break: keep-all;}
+    &__tel{position:relative; padding-left:calcVw(30vw); margin-top:calcVw(24vw); font-size:calcVw(14vw); line-height:calclH(24,14);
+        &:before{display:block; position: absolute; top:0; left:0; bottom:0; width:calcVw(20vw); height:calcVw(20vw); margin:auto 0; background-color: red; content:'';}
+    }
+    &__btn{display:inline-block; margin:calcVw(26vw) 0 calcVw(13vw); padding:calcVw(12vw) calcVw(20vw); font-size:calcVw(12vw); line-height:calclH(12,14); background-color:#1E5330; color:#fff; text-decoration: none; border-radius: 6px;}
 }

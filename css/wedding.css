@@ -136,4 +136,125 @@ header {
   line-height: 1.02222;
   text-align: left;
 }
+
+.info {
+  margin-top: 3.2vw;
+  padding: 0 12vw;
+}
+
+.info__tit {
+  position: relative;
+  margin: 10.93333vw 0 0 0;
+  height: 9.86667vw;
+  font-size: 5.33333vw;
+  line-height: 1.2;
+  color: #0B3E1C;
+  letter-spacing: -0.04em;
+  border-bottom: 1px solid #1E5330;
+}
+
+.info__box {
+  margin-top: 5.33333vw;
+  padding: 2.13333vw;
+  -webkit-box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+          box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+  border-radius: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.tab {
+  text-align: center;
+}
+
+.tab__list {
+  margin: 0;
+  padding: 0.53333vw 0;
+  list-style: none;
+  font-size: 0;
+  border-radius: 8px;
+  background-color: #F7FAFC;
+}
+
+.tab__item {
+  position: relative;
+  display: inline-block;
+  width: 33.33%;
+}
+
+.tab__item.is-active .tab__link {
+  background-color: #1E5330;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.tab__item.is-active:before {
+  display: none !important;
+}
+
+.tab__item + .tab__item:before {
+  position: absolute;
+  top: 3.2vw;
+  bottom: 3.2vw;
+  left: 0;
+  width: 0;
+  margin: auto 0;
+  border-left: 1px solid #E2E8F0;
+  content: '';
+}
+
+.tab__link {
+  display: block;
+  padding: 4.26667vw 0 3.46667vw;
+  font-size: 3.2vw;
+  line-height: 1.25;
+  text-decoration: none;
+  color: inherit;
+}
+
+.map__tit {
+  margin: 6.13333vw 0 0;
+  font-size: 4.26667vw;
+  line-height: 1.5625;
+}
+
+.map__txt {
+  margin-top: 3.2vw;
+  font-size: 3.73333vw;
+  line-height: 1.64286;
+  word-break: keep-all;
+}
+
+.map__tel {
+  position: relative;
+  padding-left: 8vw;
+  margin-top: 6.4vw;
+  font-size: 3.73333vw;
+  line-height: 1.71429;
+}
+
+.map__tel:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5.33333vw;
+  height: 5.33333vw;
+  margin: auto 0;
+  background-color: red;
+  content: '';
+}
+
+.map__btn {
+  display: inline-block;
+  margin: 6.93333vw 0 3.46667vw;
+  padding: 3.2vw 5.33333vw;
+  font-size: 3.2vw;
+  line-height: 0.85714;
+  background-color: #1E5330;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
 /*# sourceMappingURL=wedding.css.map */
