@@ -217,6 +217,12 @@ header {
   content: '';
 }
 
+.info__inner {
+  padding: 0 4.26667vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .tab {
   text-align: center;
 }
@@ -423,5 +429,81 @@ header {
   margin: auto 0;
   background: url("../images/Subtract.png") no-repeat center center/contain;
   content: '';
+}
+
+.profile {
+  margin: -9.06667vw auto 0;
+  text-align: center;
+}
+
+.profile__box {
+  display: inline-block;
+}
+
+.profile__img {
+  width: 21.86667vw;
+  height: 21.86667vw;
+  margin: 0 auto;
+}
+
+.profile__txt {
+  margin: 0;
+  font-size: 3.73333vw;
+  line-height: 1.78571;
+}
+
+.profile__tit {
+  margin: 1.06667vw 0 0 0;
+  font-size: 4.8vw;
+  line-height: 1.27778;
+  font-weight: 600;
+}
+
+.address {
+  margin-top: 6.93333vw;
+  padding-top: 6.93333vw;
+  border-top: 1px solid #F3F5F8;
+}
+
+.address__dt {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 7.46667vw;
+  font-size: 4.26667vw;
+  line-height: 1.75;
+  font-weight: 600;
+  color: #27272E;
+}
+
+.address__dt:before {
+  display: block;
+  position: absolute;
+  top: 1.06667vw;
+  left: 0;
+  content: '';
+}
+
+.address__dt.type-phone:before {
+  width: 4.8vw;
+  height: 4.8vw;
+  background: url("../images/phone_small.png") no-repeat center center/contain;
+}
+
+.address__dt.type-letter:before {
+  width: 4.26667vw;
+  height: 4.26667vw;
+  background: url("../images/letter.png") no-repeat center center/contain;
+}
+
+.address__dd {
+  margin: 0;
+  padding: 0 0 0 7.46667vw;
+  font-size: 3.73333vw;
+  line-height: 1.85714;
+  color: #718096;
+}
+
+.address__dd + .address__dt {
+  margin-top: 5.33333vw;
 }
 /*# sourceMappingURL=wedding.css.map */

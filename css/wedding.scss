@@ -49,6 +49,7 @@ header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
         &:before{display:block; position: absolute; top:0; left:0; bottom:0; width:calcVw(48vw); height:calcVw(48vw); margin:auto 0; background:url('../images/kakao.png') no-repeat center center / contain; content:'';}
         &:after{display:block; position: absolute; top:0; right:0; bottom:0; width:calcVw(14vw); height:calcVw(9vw); margin:auto 0; background:url('../images/arrow.png') no-repeat center center / contain; content:'';}
     }
+    &__inner{padding:0 calcVw(16vw); box-sizing: border-box;}
 }
 .tab{text-align: center;
     $this:&;
@@ -90,5 +91,27 @@ header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
     &__box{margin-top:calcVw(20vw); padding:calcVw(28.5vw) 0; background-color:#0B3E1C; box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05); border-radius: calcVw(16vw); text-align: center;}
     &__txt{position:relative; display:inline-block; padding-left:calcVw(35vw);  font-size:calcVw(16vw); line-height:calclH(25,16 ); color:#fff; font-weight:600; box-sizing: border-box;
         &:before{display:block; position: absolute; top:0; left:0; bottom:0; width:calcVw(24vw); height:calcVw(24vw); margin:auto 0; background:url('../images/Subtract.png') no-repeat center center / contain; content:'';}
+    }
+}
+
+.profile{ margin:calcVw(-34vw) auto 0; text-align: center; 
+    &__box{display:inline-block;}
+    &__img{width:calcVw(82vw); height:calcVw(82vw); margin:0 auto;}
+    &__txt{margin:0; font-size:calcVw(14vw); line-height:calclH(25,14 );}
+    &__tit{margin:calcVw(4vw) 0 0 0; font-size:calcVw(18vw); line-height: calclH(23,18 ); font-weight:600;}
+}
+.address{margin-top:calcVw(26vw); padding-top:calcVw(26vw); border-top:1px solid #F3F5F8;
+    $this:&;
+    &__dt{position:relative; margin:0; padding:0 0 0 calcVw(28vw); font-size:calcVw(16vw); line-height: calclH(28,16 ); font-weight: 600; color:#27272E;
+        &:before{display:block; position: absolute; top:calcVw(4vw); left:0;  content:'';}
+        &.type-phone{
+            &:before{width:calcVw(18vw); height:calcVw(18vw); background: url('../images/phone_small.png') no-repeat center center / contain;}
+        }
+        &.type-letter{
+            &:before{width:calcVw(16vw); height:calcVw(16vw); background: url('../images/letter.png') no-repeat center center / contain;}
+        }
+    }
+    &__dd{margin:0; padding:0 0 0 calcVw(28vw);  font-size:calcVw(14vw); line-height: calclH(26,14 ); color:#718096;
+        & + #{$this}__dt{margin-top:calcVw(20vw);}
     }
 }
