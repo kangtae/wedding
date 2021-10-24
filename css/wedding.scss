@@ -14,9 +14,9 @@ $green:#0B3E1C;
 }  
 
 header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
-.img-w100{width:100%;}
+.img-w100{width:100%; vertical-align: middle;}
 .font-cor{font-family: 'Cormorant', serif !important;}
-.date{text-align: center;
+.date{position:relative; text-align: center;
     &__top{padding:calcVw(49vw) calcVw(138vw) 0;}
     &__year{padding-top:calcVw(6vw); padding-bottom:calcVw(8vw); font-size: calcVw(14vw); border-top:2px solid #fff; border-bottom:1px solid #fff; box-sizing:border-box; color:#fff;}
     &__wrap{padding:0 calcVw(108vw); box-sizing:border-box;}
@@ -27,7 +27,7 @@ header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
     &__day{position:absolute; bottom:0; right:0; font-size:calcVw(120vw); color:#fff; line-height:calclH(22,120); letter-spacing: -0.04em; font-family: $eng;}
     &__time{margin-top:calcVw(73vw); color:#fff; letter-spacing: 0.3em;}
     &__img{margin-top:calcVw(15vw); width:100%;}
-    &__txt{font-size:calcVw(16vw); line-height:calclH(22,16); letter-spacing: -0.04em; color:#000; opacity: 0.3;}
+    &__txt{position:absolute; left:0; right:0;  bottom:calcVw(28vw); font-size:calcVw(16vw); line-height:calclH(22,16); letter-spacing: -0.04em; color:#000; opacity: 0.3; font-weight:600;}
 }
 
 .front{position:relative;
@@ -36,9 +36,19 @@ header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
 }
 
 
-.info{margin-top:calcVw(12vw); padding:0 calcVw(45vw);
-    &__tit{position:relative; margin:calcVw(41vw) 0 0 0; height:calcVw(37vw); font-size:calcVw(20vw); line-height:calclH(24,20 ); color:$green; letter-spacing: -0.04em; border-bottom:1px solid #1E5330;}
-    &__box{margin-top:calcVw(20vw); padding:calcVw(8vw); box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05); border-radius: 16px; box-sizing: border-box;}
+.info{margin-top:calcVw(12vw); padding:0 calcVw(45vw) calcVw(40vw);
+    &__tit{position:relative; margin:0; height:calcVw(37vw); font-size:calcVw(20vw); line-height:calclH(24,20 ); color:$green; letter-spacing: -0.04em; border-bottom:1px solid #1E5330;}
+    &__box{margin-top:calcVw(20vw); padding:calcVw(8vw); box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05); border-radius: 16px; box-sizing: border-box;
+        &.type-btn{padding:calcVw(15vw) calcVw(24vw);}
+    }
+    &__link{text-decoration: none; color:inherit;}
+    &__blank{position:relative; margin:0; padding-left:calcVw(68vw); font-size:calcVw(16vw); line-height: calclH(25,16);
+        &.type-naver{
+            &:before{background:url('../images/naver.png') no-repeat center center / contain;}
+        }
+        &:before{display:block; position: absolute; top:0; left:0; bottom:0; width:calcVw(48vw); height:calcVw(48vw); margin:auto 0; background:url('../images/kakao.png') no-repeat center center / contain; content:'';}
+        &:after{display:block; position: absolute; top:0; right:0; bottom:0; width:calcVw(14vw); height:calcVw(9vw); margin:auto 0; background:url('../images/arrow.png') no-repeat center center / contain; content:'';}
+    }
 }
 .tab{text-align: center;
     $this:&;
@@ -51,13 +61,34 @@ header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
         & + &:before{position: absolute; top:calcVw(12vw); bottom:calcVw(12vw); left:0; width:0; margin:auto 0; border-left:1px solid #E2E8F0; content:'';}
     }
     &__link{display:block; padding:calcVw(16vw) 0 calcVw(13vw); font-size:calcVw(12vw); line-height:calclH(15,12); text-decoration: none; color:inherit;}
+    &__content{display:none; margin-top:calcVw(41vw);
+        &.is-active{display:block;}
+    }
 }
 
 .map{
     &__tit{margin:calcVw(23vw) 0 0; font-size:calcVw(16vw); line-height:calclH(25,16);}
     &__txt{margin-top:calcVw(12vw); font-size:calcVw(14vw); line-height:calclH(23,14); word-break: keep-all;}
     &__tel{position:relative; padding-left:calcVw(30vw); margin-top:calcVw(24vw); font-size:calcVw(14vw); line-height:calclH(24,14);
-        &:before{display:block; position: absolute; top:0; left:0; bottom:0; width:calcVw(20vw); height:calcVw(20vw); margin:auto 0; background-color: red; content:'';}
+        &:before{display:block; position: absolute; top:0; left:0; bottom:0; width:calcVw(20vw); height:calcVw(20vw); margin:auto 0; background:url('../images/phone_icon.png') no-repeat center center / contain; content:'';}
     }
     &__btn{display:inline-block; margin:calcVw(26vw) 0 calcVw(13vw); padding:calcVw(12vw) calcVw(20vw); font-size:calcVw(12vw); line-height:calclH(12,14); background-color:#1E5330; color:#fff; text-decoration: none; border-radius: 6px;}
+}
+
+.schedule{margin-top:calcVw(60vw);
+    &__tit{margin:calcVw(20vw) 0 calcVw(30vw); font-size:calcVw(18vw); line-height:calclH(26,18 ); text-align: center;}
+    &__list{margin:0; padding:0; list-style:none; font-size:0; text-align: left;}
+    &__item{position:relative; display:inline-flex; width:calcVw(40vw); height:calcVw(40vw); align-items: center; justify-content: center; font-size:calcVw(12vw); line-height:calclH(17,12 );
+        &.is-active{color:#fff !important;
+            &:before{display:block; position:absolute; top:0; left:0; right:0; bottom:0; background-color:#EC7474; border-radius: 50%; content:''; z-index: -1;}
+        }
+        &:nth-child(7) ~ &{margin-top:calcVw(20vw)}
+        &:nth-child(7n - 1){color:#4C6FFF;}
+        &:nth-child(7n){color:#EB2D2D;}
+        &.type-grey{background-color:#FCFCFC;}
+    }
+    &__box{margin-top:calcVw(20vw); padding:calcVw(28.5vw) 0; background-color:#0B3E1C; box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05); border-radius: calcVw(16vw); text-align: center;}
+    &__txt{position:relative; display:inline-block; padding-left:calcVw(35vw);  font-size:calcVw(16vw); line-height:calclH(25,16 ); color:#fff; font-weight:600; box-sizing: border-box;
+        &:before{display:block; position: absolute; top:0; left:0; bottom:0; width:calcVw(24vw); height:calcVw(24vw); margin:auto 0; background:url('../images/Subtract.png') no-repeat center center / contain; content:'';}
+    }
 }

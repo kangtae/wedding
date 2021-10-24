@@ -18,6 +18,7 @@ header {
 
 .img-w100 {
   width: 100%;
+  vertical-align: middle;
 }
 
 .font-cor {
@@ -25,6 +26,7 @@ header {
 }
 
 .date {
+  position: relative;
   text-align: center;
 }
 
@@ -106,11 +108,16 @@ header {
 }
 
 .date__txt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 7.46667vw;
   font-size: 4.26667vw;
   line-height: 1.375;
   letter-spacing: -0.04em;
   color: #000;
   opacity: 0.3;
+  font-weight: 600;
 }
 
 .front {
@@ -139,12 +146,12 @@ header {
 
 .info {
   margin-top: 3.2vw;
-  padding: 0 12vw;
+  padding: 0 12vw 10.66667vw;
 }
 
 .info__tit {
   position: relative;
-  margin: 10.93333vw 0 0 0;
+  margin: 0;
   height: 9.86667vw;
   font-size: 5.33333vw;
   line-height: 1.2;
@@ -161,6 +168,53 @@ header {
   border-radius: 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.info__box.type-btn {
+  padding: 4vw 6.4vw;
+}
+
+.info__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.info__blank {
+  position: relative;
+  margin: 0;
+  padding-left: 18.13333vw;
+  font-size: 4.26667vw;
+  line-height: 1.5625;
+}
+
+.info__blank.type-naver:before {
+  background: url("../images/naver.png") no-repeat center center/contain;
+}
+
+.info__blank:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 12.8vw;
+  height: 12.8vw;
+  margin: auto 0;
+  background: url("../images/kakao.png") no-repeat center center/contain;
+  content: '';
+}
+
+.info__blank:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3.73333vw;
+  height: 2.4vw;
+  margin: auto 0;
+  background: url("../images/arrow.png") no-repeat center center/contain;
+  content: '';
 }
 
 .tab {
@@ -212,6 +266,15 @@ header {
   color: inherit;
 }
 
+.tab__content {
+  display: none;
+  margin-top: 10.93333vw;
+}
+
+.tab__content.is-active {
+  display: block;
+}
+
 .map__tit {
   margin: 6.13333vw 0 0;
   font-size: 4.26667vw;
@@ -242,7 +305,7 @@ header {
   width: 5.33333vw;
   height: 5.33333vw;
   margin: auto 0;
-  background-color: red;
+  background: url("../images/phone_icon.png") no-repeat center center/contain;
   content: '';
 }
 
@@ -256,5 +319,109 @@ header {
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
+}
+
+.schedule {
+  margin-top: 16vw;
+}
+
+.schedule__tit {
+  margin: 5.33333vw 0 8vw;
+  font-size: 4.8vw;
+  line-height: 1.44444;
+  text-align: center;
+}
+
+.schedule__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  text-align: left;
+}
+
+.schedule__item {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 10.66667vw;
+  height: 10.66667vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3.2vw;
+  line-height: 1.41667;
+}
+
+.schedule__item.is-active {
+  color: #fff !important;
+}
+
+.schedule__item.is-active:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #EC7474;
+  border-radius: 50%;
+  content: '';
+  z-index: -1;
+}
+
+.schedule__item:nth-child(7) ~ .schedule__item {
+  margin-top: 5.33333vw;
+}
+
+.schedule__item:nth-child(7n - 1) {
+  color: #4C6FFF;
+}
+
+.schedule__item:nth-child(7n) {
+  color: #EB2D2D;
+}
+
+.schedule__item.type-grey {
+  background-color: #FCFCFC;
+}
+
+.schedule__box {
+  margin-top: 5.33333vw;
+  padding: 7.6vw 0;
+  background-color: #0B3E1C;
+  -webkit-box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+          box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+  border-radius: 4.26667vw;
+  text-align: center;
+}
+
+.schedule__txt {
+  position: relative;
+  display: inline-block;
+  padding-left: 9.33333vw;
+  font-size: 4.26667vw;
+  line-height: 1.5625;
+  color: #fff;
+  font-weight: 600;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.schedule__txt:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 6.4vw;
+  height: 6.4vw;
+  margin: auto 0;
+  background: url("../images/Subtract.png") no-repeat center center/contain;
+  content: '';
 }
 /*# sourceMappingURL=wedding.css.map */
