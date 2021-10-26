@@ -83,7 +83,7 @@ header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
     &__list{margin:0; padding:0; list-style:none; font-size:0; text-align: left;}
     &__item{position:relative; display:inline-flex; width:calc(100% / 7); height:calcVw(40vw); align-items: center; justify-content: center; font-size:calcVw(12vw); line-height:calclH(17,12 );
         &.is-active{color:#fff !important;
-            &:before{display:block; position:absolute; top:0; left:0; right:0; bottom:0; background-color:#EC7474; border-radius: 50%; content:''; z-index: -1;}
+            &:before{display:block; position:absolute; top:0; left:0; right:0; bottom:0; background-color:#EC7474; border-radius: 50%; content:''; z-index: -1;   animation: scale 1.2s infinite alternate}
         }
         &:nth-child(7) ~ &{margin-top:calcVw(20vw)}
         &:nth-child(7n - 1){color:#4C6FFF;}
@@ -117,3 +117,131 @@ header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
         & + #{$this}__dt{margin-top:calcVw(20vw);}
     }
 }
+
+@keyframes scale {
+    0%   { transform: scale(0.9); opacity: 0.9; }
+    100%  { transform: scale(1.1); opacity:1;}
+  }
+  
+
+
+
+$shooting-time: 3000ms;
+
+.night {
+  position: absolute;
+  top:calcVw(-50vw);
+ left:0;
+ right:0;
+  height: 100vh;
+  transform: rotateZ(45deg);
+  // animation: sky 200000ms linear infinite;
+}
+
+.shooting_star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  // width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(214, 184, 44, 0.5), rgba(0, 0, 255, 0));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px rgba(218, 199, 113, 1));
+  animation:
+    tail $shooting-time ease-in-out infinite,
+    shooting $shooting-time ease-in-out infinite;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    // width: 30px;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgba(214, 184, 44, 1), rgba(0, 0, 255, 0));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    animation: shining $shooting-time ease-in-out infinite;
+  }
+
+  &::after {
+    // CodePen Error
+    // @extend .shooting_star::before;
+    
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    // width: 30px;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgba(214, 184, 44, 1), rgba(0, 0, 255, 0));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    animation: shining $shooting-time ease-in-out infinite;
+    transform: translateX(50%) rotateZ(-45deg);
+  }
+  
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      $delay: random(9999) + 0ms;
+      top: calc(50% - #{random(400) - 200px});
+      left: calc(50% - #{random(300) + 0px});
+      animation-delay: $delay;
+      // opacity: random(50) / 100 + 0.5;
+      
+      &::before,
+      &::after {
+        animation-delay: $delay;
+      }
+    }
+  }
+}
+
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+  
+  30% {
+    width: 100px;
+  }
+  
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shining {
+  0% {
+    width: 0;
+  }
+  
+  50% {
+    width: 30px;
+  }
+  
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+  
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes sky {
+  0% {
+    transform: rotate(45deg);
+  }
+  
+  100% {
+    transform: rotate(45 + 360deg);
+  }
+}
+
