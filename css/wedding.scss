@@ -74,12 +74,14 @@ header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
         &:before{display:block; position: absolute; top:0; left:0; bottom:0; width:calcVw(20vw); height:calcVw(20vw); margin:auto 0; background:url('../images/phone_icon.png') no-repeat center center / contain; content:'';}
     }
     &__btn{display:inline-block; margin:calcVw(26vw) 0 calcVw(13vw); padding:calcVw(12vw) calcVw(20vw); font-size:calcVw(12vw); line-height:calclH(12,14); background-color:#1E5330; color:#fff; text-decoration: none; border-radius: 6px;}
+    &__box{overflow:hidden; position:relative; width:100%; height:0; padding-bottom:41.63%; border-radius: 16px;}
+    &__api{position: absolute; top:0; left:0; right:0; bottom:0;}
 }
 
 .schedule{margin-top:calcVw(60vw);
     &__tit{margin:calcVw(20vw) 0 calcVw(30vw); font-size:calcVw(18vw); line-height:calclH(26,18 ); text-align: center;}
     &__list{margin:0; padding:0; list-style:none; font-size:0; text-align: left;}
-    &__item{position:relative; display:inline-flex; width:calcVw(40vw); height:calcVw(40vw); align-items: center; justify-content: center; font-size:calcVw(12vw); line-height:calclH(17,12 );
+    &__item{position:relative; display:inline-flex; width:calc(100% / 7); height:calcVw(40vw); align-items: center; justify-content: center; font-size:calcVw(12vw); line-height:calclH(17,12 );
         &.is-active{color:#fff !important;
             &:before{display:block; position:absolute; top:0; left:0; right:0; bottom:0; background-color:#EC7474; border-radius: 50%; content:''; z-index: -1;}
         }
