@@ -13,7 +13,7 @@ $green:#0B3E1C;
     @return ($lh/$font);
 }  
 
-header{background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
+header{position:relative; overflow:hidden; width:100%; background:linear-gradient(180deg, #1E5330 0%, #10321B 100%)}
 .img-w100{width:100%; vertical-align: middle;}
 .font-cor{font-family: 'Cormorant', serif !important;}
 .date{position:relative; text-align: center;
