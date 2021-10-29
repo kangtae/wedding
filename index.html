@@ -10,7 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/wedding.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+  />
+  <link rel="stylesheet" href="css/wedding.css">
+    
 </head>
 <body>
     <div class="container">
@@ -67,13 +72,13 @@
             <div class="tab">
                 <ul class="tab__list">
                     <li class="tab__item">
-                        <a href="man" data-num="0" class="tab__link">신랑측</a>
+                        <a href="#man" data-num="0" class="tab__link">신랑측</a>
                     </li>
                     <li class="tab__item is-active">
-                        <a href="info" data-num="1" class="tab__link">안내</a>
+                        <a href="#info" data-num="1" class="tab__link">안내</a>
                     </li>
                     <li class="tab__item">
-                        <a href="woman" data-num="2" class="tab__link">신부측</a>
+                        <a href="#woman" data-num="2" class="tab__link">신부측</a>
                     </li>
                 </ul>
             </div>
@@ -112,10 +117,12 @@
                         <div class="map__box">
                             <div id="map" class="map__api"></div>
                         </div>
-                        <h3 class="map__tit">보테가마지오 웨딩홀</h3>
-                        <p class="map__txt">서울특별시 성동구 서울숲2길 32-14<br> 갤러리아 포레 보테가마지오 G층(B2)</p>
-                        <p class="map__tel">02-3409-0123</p>
-                        <a href="tel:02-3409-0123" class="map__btn">웨딩홀 전화걸기</a>
+                        <div class="map__area">
+                            <h3 class="map__tit">보테가마지오 웨딩홀</h3>
+                            <p class="map__txt">서울특별시 성동구 서울숲2길 32-14<br> 갤러리아 포레 보테가마지오 G층(B2)</p>
+                            <p class="map__tel">02-3409-0123</p>
+                            <a href="tel:02-3409-0123" class="map__btn">웨딩홀 전화걸기</a>
+                        </div>
                     </div>
                 </div>
                 <div class="info__box type-btn">
@@ -187,6 +194,50 @@
                        </p>
                     </div>
                 </article>
+                <article class="gallery">
+                    <h2 class="info__tit">갤러리</h2>
+                    <div class="gallery__box swiper js-gallery">
+                        <ul class="gallery__list swiper-wrapper">
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_1.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_2.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_3.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_4.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_5.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_6.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_7.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_8.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_9.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_10.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_11.png" alt="">
+                            </li>
+                            <li class="gallery__item swiper-slide">
+                                <img src="images/gallery_5.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+
+                </article>
             </section>
             <section class="tab__content type-woman">
                 <h2 class="info__tit">신부측 안내</h2>
@@ -209,16 +260,16 @@
                                 <dt class="address__dt type-letter">마음 보내실 곳</dt>
                                 <dd class="address__dd">
                                     농협 352-0057-2771-43 (구범수)<br>
-                                    농협 223023-56-062241 (김혜경)
+                                    국민 026401-04-209903 (구슬기)
                                 </dd>
                             </dl>
                         </div>
                     </div>
                 </div>
             </section>
-
         </section>
     </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=72f2ddd2d2583dc15153197ee4211fae"></script>
     <script src="js/wedding.js"></script>
 </body>

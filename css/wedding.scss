@@ -36,7 +36,7 @@ header{position:relative; overflow:hidden; width:100%; background:linear-gradien
 }
 
 
-.info{margin-top:calcVw(12vw); padding:0 calcVw(45vw) calcVw(40vw);
+.info{overflow:hidden; margin-top:calcVw(12vw); padding:0 calcVw(45vw) calcVw(40vw);
     &__tit{position:relative; margin:0; height:calcVw(37vw); font-size:calcVw(20vw); line-height:calclH(24,20 ); color:$green; letter-spacing: -0.04em; border-bottom:1px solid #1E5330;}
     &__box{margin-top:calcVw(20vw); padding:calcVw(8vw); box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05); border-radius: 16px; box-sizing: border-box;
         &.type-btn{padding:calcVw(15vw) calcVw(24vw);}
@@ -73,9 +73,10 @@ header{position:relative; overflow:hidden; width:100%; background:linear-gradien
     &__tel{position:relative; padding-left:calcVw(30vw); margin-top:calcVw(24vw); font-size:calcVw(14vw); line-height:calclH(24,14);
         &:before{display:block; position: absolute; top:0; left:0; bottom:0; width:calcVw(20vw); height:calcVw(20vw); margin:auto 0; background:url('../images/phone_icon.png') no-repeat center center / contain; content:'';}
     }
-    &__btn{display:inline-block; margin:calcVw(26vw) 0 calcVw(13vw); padding:calcVw(12vw) calcVw(20vw); font-size:calcVw(12vw); line-height:calclH(12,14); background-color:#1E5330; color:#fff; text-decoration: none; border-radius: 6px;}
+    &__btn{display:block; margin:calcVw(26vw) 0 calcVw(13vw); padding:calcVw(12vw) calcVw(20vw); font-size:calcVw(12vw); line-height:calclH(12,14); background-color:#1E5330; color:#fff; text-decoration: none; border-radius: 6px; text-align: center;}
     &__box{overflow:hidden; position:relative; width:100%; height:0; padding-bottom:41.63%; border-radius: 16px;}
     &__api{position: absolute; top:0; left:0; right:0; bottom:0;}
+    &__area{padding:0 calcVw(16vw); box-sizing: border-box;}
 }
 
 .schedule{margin-top:calcVw(60vw);
@@ -117,6 +118,15 @@ header{position:relative; overflow:hidden; width:100%; background:linear-gradien
         & + #{$this}__dt{margin-top:calcVw(20vw);}
     }
 }
+
+.gallery{margin:calcVw(60vw) 0 calcVw(30vw);
+  &__list{margin:0; padding:0; list-style:none;}
+  &__item{overflow: hidden; border-radius: calcVw(10vw);
+    img{width:100%; vertical-align: middle;}
+  }
+  &__box{overflow: visible !important; margin-top:calcVw(30vw);}
+}
+
 
 @keyframes scale {
     0%   { transform: scale(0.9); opacity: 0.9; }
